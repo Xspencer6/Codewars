@@ -1,0 +1,11 @@
+def solution(s):
+    pair = ''
+    answer = []
+    for character in s:
+        pair += character
+        if len(pair) == 2:
+            answer.append(pair)
+            pair = ''
+    if pair:
+        answer.append(pair + '_')
+    return answer
