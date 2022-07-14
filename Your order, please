@@ -1,0 +1,7 @@
+def order(sentence):
+    new_sentence = []
+    for i in range (1,10):
+        for words in sentence.split():
+            if str(i) in words:
+                new_sentence.append(words)
+    return ' '.join(new_sentence)
