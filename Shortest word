@@ -1,0 +1,4 @@
+def find_short(s):
+    list = s.split()
+    list.sort(key=len)
+    return len(list[0])
