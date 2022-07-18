@@ -1,0 +1,13 @@
+def DNA_strand(dna):
+    newDNA = ''
+    dna.upper()
+    for strand in dna:
+        if strand == 'A':
+            newDNA += 'T'
+        elif strand == 'T':
+            newDNA += 'A'
+        elif strand == 'C':
+            newDNA += 'G'
+        elif strand == 'G':
+            newDNA += 'C'
+    return newDNA
