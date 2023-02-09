@@ -1,0 +1,7 @@
+def find_uniq(arr):
+    memo = {}
+    for number in arr:
+        if number not in memo:
+            memo[number] = arr.count(number)
+        if memo[number] == 1:   # means the unique has been found
+            return number
