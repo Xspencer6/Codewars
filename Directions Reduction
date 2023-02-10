@@ -1,0 +1,13 @@
+def dirReduc(arr):
+    opposite = {'NORTH': 'SOUTH',
+              'SOUTH': 'NORTH',
+              'WEST': 'EAST',
+              'EAST': 'WEST'
+                }
+    answer = []
+    for direction in arr:
+        if len(answer) == 0 or answer[-1] != opposite[direction]:   # check if the opposite of direction is equal to last element appended.
+            answer.append(direction)
+            continue
+        answer.pop()
+    return answer
