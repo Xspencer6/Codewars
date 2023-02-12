@@ -1,0 +1,12 @@
+def make_readable(seconds):
+    hours = seconds // 3600
+    minutes = seconds // 60 % 60
+    second = seconds % 60
+    result = "00:00:00"
+    if len(str(hours)) == 1:
+        hours = '0' + str(hours)
+    if len(str(minutes)) == 1:
+        minutes = '0' + str(minutes)
+    if len(str(second)) == 1:
+        second = '0' + str(second)
+    return f'{hours}:{minutes}:{second}'
