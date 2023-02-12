@@ -1,0 +1,10 @@
+def score(dice):
+    pointConvert = [1000, 200, 300, 400, 500, 600]
+    counter = [0, 0, 0, 0, 0, 0]
+    other = [100, 0, 0, 0, 50, 0]
+    points = 0
+    for roll in dice:   # adds the count of every roll
+        counter[roll-1] += 1
+    for i, count in enumerate(counter):
+        points += (pointConvert[i] if count >= 3 else 0) + other[i] * (count % 3)
+    return points
