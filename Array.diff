@@ -1,0 +1,7 @@
+def array_diff(a, b):
+    for x in b:
+        # remove that occurrence
+        num = a.count(x)
+        for _ in range(num):
+            a.remove(x)
+    return a
