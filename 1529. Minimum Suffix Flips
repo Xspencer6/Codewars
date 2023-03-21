@@ -1,0 +1,11 @@
+class Solution(object):
+    def minFlips(self, target, index=0):
+        """
+        :type target: str
+        :rtype: int
+        """
+        ans = 0
+        for i in target:
+            if (ans & 1) ^ int(i):
+                ans += 1
+        return ans
